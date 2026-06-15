@@ -9,7 +9,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Stage 2: Run on Tomcat
-FROM tomcat:10.1-jdk17
+FROM tomcat:9.0-jdk17
 
 # Remove default web apps (optional)
 RUN rm -rf /usr/local/tomcat/webapps/*
